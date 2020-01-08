@@ -52,7 +52,7 @@ RUN adduser -D -u 1000 emqx \
 RUN chgrp -Rf emqx /opt/emqx && chmod -Rf g+w /opt/emqx \
       && chown -Rf emqx /opt/emqx
 
-USER emqx
+USER root
 
 VOLUME ["/opt/emqx/log", "/opt/emqx/data", "/opt/emqx/lib", "/opt/emqx/etc"]
 
